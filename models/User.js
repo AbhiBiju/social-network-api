@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const dateFormat = require("../utils/dateFormat");
 
 const userSchema = new Schema(
   {
@@ -40,6 +39,11 @@ const userSchema = new Schema(
 
 userSchema.virtual("friendCount").get(function () {
   return this.friends.length;
+});
+
+userSchema.pre("remove", function (next) {
+  
+  next();
 });
 
 const User = model("User", userSchema);
