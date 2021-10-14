@@ -1,4 +1,4 @@
-const { Thought, Reaction } = require("../models");
+const { Thought } = require("../models");
 
 const reactionController = {
   addReaction({ params, body }, res) {
