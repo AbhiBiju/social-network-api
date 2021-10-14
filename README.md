@@ -16,6 +16,8 @@
 
 In this Challenge, I used node, express, and mongoose to create the back end api routes for a Social Network App which returns user info based on input and utilizes subdocument arrays to associate replies on a post/thought and creation and relation of thoughts and reactions via object Ids. It utilizes the express router for configuraiton and set up of the needed routes and takes in json data from the user for input. When a user or thought is deleted, the associated documents will also be deleted.
 
+https://user-images.githubusercontent.com/83188832/137399597-2e75556d-40bc-4391-9d2c-1ae16c419c68.mp4
+
 ## Technologies and Languages
 
 - JavaScript
