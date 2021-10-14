@@ -52,7 +52,9 @@ const thoughtController = {
   },
   deleteThought({ params }, res) {
     Thought.findByIdAndDelete({ _id: params.id })
-      .then(({ _id, writtenBy }) => User.findOneAndUpdate({ username: writtenBy }, { $pull: { thoughts: _id } }))
+      .then(({ _id, writtenBy }) => {
+        User.findOneAndUpdate({ username: writtenBy }, { $pull: { thoughts: _id } });
+      })
       .then((userData) => res.json(userData))
       .catch((err) => res.json(err));
   },
